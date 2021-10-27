@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" style="margin-top: 20px">
+      <mat-card style="margin: 50px 0">
+        <h1>Update book:</h1>
+        <form class="edit-category" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()" novalidate>
+          <mat-form-field style="width: 350px" appearance="outline">
+            <mat-label>Title:</mat-label>
+            <input matInput name="title" [(ngModel)]="book.title" #title="ngModel" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field style="width: 350px" appearance="outline">
+            <mat-label>Author:</mat-label>
+            <input matInput name="nameCategory" [(ngModel)]="book.author" #author="ngModel" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field style="width: 350px" appearance="outline">
+            <mat-label>Description:</mat-label>
+            <input matInput name="description" [(ngModel)]="book.description" #description="ngModel" required>
+          </mat-form-field>
+          <br>
+          <button mat-stroked-button color="accent" class="mat-button-toggle-group btn-outline-primary">Update Book
+          </button>
+          <button routerLink="/book-list" mat-stroked-button color="accent"
+                  class="mat-button-toggle-group btn-outline-primary">Back
+          </button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

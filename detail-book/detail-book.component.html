@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" style="margin-top: 20px">
+      <mat-card style="margin: 50px 0">
+        <h1>Book detail:</h1>
+        <form class="edit-category" #f="ngForm" (ngSubmit)="f.form.valid&&ngSubmit()" novalidate>
+          <mat-form-field style="width: 350px" appearance="outline">
+           <p>Title :</p> <text name="title" [(ngModel)]="book.title" #title="ngModel">{{book.title}}</text>
+          </mat-form-field>
+          <br>
+          <mat-form-field style="width: 350px" appearance="outline">
+            <p>Author :</p> <text name="author" [(ngModel)]="book.title" #title="ngModel">{{book.author}}</text>
+          </mat-form-field>
+          <br>
+          <mat-form-field style="width: 350px" appearance="standard">
+            <p>Description :</p><textarea readonly name="description" [(ngModel)]="book.description" #description="ngModel" cols="50" rows="10">{{book.description}}</textarea>
+          </mat-form-field>
+          <br>
+          <button routerLink="/book-list" mat-stroked-button color="accent"
+                  class="mat-button-toggle-group btn-outline-primary">Back
+          </button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
